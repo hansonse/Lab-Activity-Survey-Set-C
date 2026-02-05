@@ -66,16 +66,16 @@ namespace Survey_Set_C
 
             int value = int.Parse(btn.Tag.ToString());
 
-            // Traverse parents to find the GroupBox
+            
             Control parent = btn.Parent;
             while (parent != null && !(parent is GroupBox))
                 parent = parent.Parent;
 
-            if (parent == null) return; // not inside a groupbox
+            if (parent == null) return; 
 
             GroupBox grp = parent as GroupBox;
 
-            // Assign value based on which groupbox it is
+            
             if (grp == grpWaterResistance) waterResistance = value.ToString();
             else if (grp == grpAntiBacteria) antiBacteria = value.ToString();
             else if (grp == grpSoftMaterial) softMaterial = value.ToString();
